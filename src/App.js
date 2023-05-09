@@ -1,11 +1,19 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Countries from './components/countries/countries';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='text-4xl font-bold text-red-600 '>I love coding </h1>
-
-    </div>
+    <>
+     <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Countries />}></Route>
+      </Routes>
+     </BrowserRouter>
+    
+    </>
   );
 }
 
