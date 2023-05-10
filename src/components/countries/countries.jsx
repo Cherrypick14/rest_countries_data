@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import Article from '../article/article';
 
 const Countries = () => {
 
@@ -13,7 +14,7 @@ const Countries = () => {
 
                 const data = await res.json()
     
-                setCountries(data); 
+                setCountries(data.slice(0,10)); 
 
             } catch (error) {
                 console.debug(error);
@@ -21,12 +22,21 @@ const Countries = () => {
 
         }
 
-           getCountriesData()         
+           getCountriesData();        
     },[])
     
   return (
-    <div>{countries.length}</div>
+    <div>
+        
+       {countries.map((country)=>(
+
+        <Article key={country.name.common} {...country} />
+
+        
+       ))}
+        
+        </div>
   )
 }
 
-export default Countries
+export default Countries;
