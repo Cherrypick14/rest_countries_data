@@ -3,10 +3,10 @@ import React from 'react'
 const Article = ({flags,name, population,region,subregion}) => {
   return (
 
-    <article className='shadow-lg rounded-lg hover:drop-shadow-xl cursor-pointer '>
+    <article className='shadow-lg rounded-lg hover:drop-shadow-xl shadow-slate-500 cursor-pointer overflow-hidden hover:scale-105 duration-200 '>
 
         <img src={flags.svg} alt="" className='md:h-64 w-full object-cover '/>
-        
+
          <div className="p-4">
 
          <h2 className='font-bold mb-2 text-lg text-slate-950'>{name.common}</h2>
