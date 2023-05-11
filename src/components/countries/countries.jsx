@@ -26,9 +26,9 @@ const Countries = () => {
     },[])
     
   return (
-    <div>
+    <section className='container mx-auto p-8'>
         {/* {forms} */}
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 
         {countries.map((country)=>(
 
@@ -39,7 +39,7 @@ const Countries = () => {
         </div>
     
         
-        </div>
+        </section>
   )
 }
 
