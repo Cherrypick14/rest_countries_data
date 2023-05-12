@@ -38,7 +38,6 @@ const Countries = () => {
     ))}
         </div>
     
-        
         </section>
   )
 }
