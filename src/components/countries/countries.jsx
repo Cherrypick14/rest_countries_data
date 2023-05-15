@@ -1,10 +1,10 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect}from 'react';
 import Article from '../article/article';
 import { regions } from '../../regions';
 
 const Countries = () => {
 
-    const [countries, setCountries]= useState([]);
+    const [countries, setCountries] = useState([]);
     const [searchText, setSearchText] = useState("");
 
     useEffect(()=>{
@@ -106,8 +106,11 @@ const Countries = () => {
               >
 
                 {/* {Our regions} */}
-                {regions.map((region)=>(
-                 <option key={region.id} value={region.name}>{region.name}</option>
+
+                {regions.map((region,index)=>(
+
+                 <option key={index} value={region.name}>{region.name}</option>
+
                 ))}
 
               </select>
@@ -118,7 +121,7 @@ const Countries = () => {
 
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 
-        {countries?.map((country)=>(
+        { countries?.map((country)=>(
 
         <Article key={country.name.common} {...country} />
 
